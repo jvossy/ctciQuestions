@@ -19,5 +19,11 @@ def isUnique(inStr):
 def checkPermutation(st1, st2):
     if len(st1) != len(st2):
         return False
-    
+    for char in st1:
+        try:
+            x = st2.index(char)
+        except ValueError:
+            return False
+        st2 = st2[0:x-1] + st2[x+1:len(st2)]
+        print(st2)
     return True

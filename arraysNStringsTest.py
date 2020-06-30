@@ -32,8 +32,6 @@ class TestCheckPermutation(unittest.TestCase):
         t = 'bread'
         self.assertFalse(a.checkPermutation(s,t))
 
-
-
 if __name__ == '__main__':
     unittest.main()
 
