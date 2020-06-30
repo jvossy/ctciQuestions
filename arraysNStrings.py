@@ -6,6 +6,7 @@ Created on Tue Jun 30 12:58:24 2020
 """
 
 def isUnique(inStr):
+    #Returns if a string contains only unique characters
     if type(inStr) != type('yoyo'):
         raise TypeError('inStr must be of type String.')
     ind = 1
@@ -17,6 +18,7 @@ def isUnique(inStr):
     return True
 
 def checkPermutation(st1, st2):
+    #Returns if two strings are permutations of each other
     if len(st1) != len(st2):
         return False
     for char in st1:
