@@ -16,5 +16,8 @@ def isUnique(inStr):
         ind = ind+1
     return True
 
-def checkPermutations(st1, st2):
-    return False
+def checkPermutation(st1, st2):
+    if len(st1) != len(st2):
+        return False
+    
+    return True
