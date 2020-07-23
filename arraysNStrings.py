@@ -11,8 +11,9 @@ def isUnique(inStr):
         raise TypeError('inStr must be of type String.')
     ind = 1
     for char in inStr:
-        for prior in (inStr[0:ind-1]):
-            if prior == char:
+        ra = range(ind-1)
+        for prior in ra:
+            if inStr[prior] == char:
                 return False
         ind = ind+1
     return True
@@ -27,5 +28,4 @@ def checkPermutation(st1, st2):
         except ValueError:
             return False
         st2 = st2[0:x-1] + st2[x+1:len(st2)]
-        print(st2)
     return True
