@@ -39,6 +39,20 @@ class TestCheckPermutation(unittest.TestCase):
         s = 'dread'
         t = 'bread'
         self.assertFalse(a.checkPermutation(s,t))
+        
+class TesturlIfy(unittest.TestCase):
+    def test_no_space(self):
+        s = 'alotofwords'
+        r = a.urlIfy(s)
+        self.assertTrue(s == r)
+        
+    def test_sentance(self):
+        s = 'a lot of words'
+        t = 'a%20lot%20of%20words'
+        r = a.urlIfy(s)
+        print(r)
+        self.assertTrue(r == t) 
+        
 if __name__ == '__main__':
     unittest.main()
 
